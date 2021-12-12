@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "github.com/no7wataru/proto-sqs-poc/proto";
+
+message Message {
+  string title = 1;
+  repeated Sentence sentences = 2;
+}
+
+message Sentence {
+  int64 id = 1;
+  string text = 2;
+}
